@@ -37,6 +37,6 @@ Drawing two box plots, we observe that the closer to the urban area, the shorter
 
 
 
-![prior_usage](/Users/huangliming/PycharmProjects/911Project/figs/prior_usage.png)
+![prior_usage](figs/prior_usage.png)
 
 The usage rates of AED and CPR before EMS arrival show little difference between urban and rural areas.
