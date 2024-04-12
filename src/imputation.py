@@ -8,7 +8,8 @@ path=['data/nemsis.db','data/imputed-data.csv']
 # Connection
 con = sqlite3.connect(path[0])
 
-# Corrected query with placeholders
+# Corrected query with placeholder
+# s
 # Assuming feature_values contains attributes that are string representations of your column names
 constants = mapper_values.get_cardiac_arrest_constants()
 

@@ -42,11 +42,10 @@ def map_date_time(date_time: str):
     except:
         return None
 
-# 数据库连接
 con = sqlite3.connect(path[0])
 
 
-# 数据可视化函数定义
+
 def generate_heat_map(df: pd.DataFrame, file):
     plt.figure(figsize=(10, 6))
     sns.heatmap(df.isna().transpose(), cbar=False)

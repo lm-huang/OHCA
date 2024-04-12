@@ -10,6 +10,7 @@ imputation: data/nemsis.db
 
 response-time: data/nemsis.db
 	python -B src/response_time_diff.py
+	python -B src/scale_diff.py
 
 AEDCPR: data/nemsis.db
 	python -B src/AED_CPR.py
