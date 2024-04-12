@@ -33,15 +33,15 @@ It is noted that there is some data missing in certain areas. We performed mean 
 
 The time elapsed from the reception of emergency signals by the PSAP to the arrival of rescue personnel at the scene is being statistically analyzed. It has been observed that there are some unreasonable values (negative or extremely large values). To address this issue, data filtering is being conducted, with a focus on selecting values within the range of 0 to 100 minutes. The data for the duration from PSAP to the arrival of the hospital follows the same data filtering as well, except that the range is from 0 to 300 minutes.
 
-![to ICU](figs/to ICU.png)
+![to ICU](figs/to-ICU.png)
 
-![to secene](figs/to secene.png)
+![to secene](figs/to-secene.png)
 
 After filtering the data, we have:
 
-![f- to scene](figs/f- to scene.png)
+![f- to scene](figs/f-to-scene.png)
 
-![f-to ICU](figs/f-to ICU.png)
+![f-to ICU](figs/f-to-ICU.png)
 
 Drawing two box plots, we observe that the closer to the urban area, the shorter the window period for patients to receive medical treatment. This is more favorable for patients with CA in urban areas.
 
