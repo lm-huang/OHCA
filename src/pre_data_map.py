@@ -89,8 +89,6 @@ def generate_missing_value_bar_chart(df: pd.DataFrame, variable_name: str, file_
     plt.savefig(file_path)
     plt.close()
 
-
-# 查询并处理数据
 constants = mapper_values.get_cardiac_arrest_constants()
 
 aed_prior_ems_field = constants['CARDIAC_ARREST']['AED_PRIOR_EMS']

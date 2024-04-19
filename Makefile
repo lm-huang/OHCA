@@ -15,6 +15,9 @@ response-time: data/nemsis.db
 AEDCPR: data/nemsis.db
 	python -B src/AED_CPR.py
 
+xgb: data/nemsis.db
+	python -B src/xgb.py
+
 clean:
 	rm data/nemsis.db
 	rm data/imputed-features.csv
