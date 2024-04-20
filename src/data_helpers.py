@@ -5,6 +5,9 @@ import feature_names, feature_values
 import map_feature_values as mapper
 import numpy as np
 
+
+path = 'data/nemsis.db'
+
 def map_cardiac_arrest_data(data: pd.DataFrame, complete=True)-> pd.DataFrame:
     data['gender'] = data['gender'].map(mapper.map_gender)
     data['aed_prior_ems'] = data['aed_prior_ems'].map(mapper.map_aed)
@@ -24,7 +27,7 @@ def map_cardiac_arrest_data(data: pd.DataFrame, complete=True)-> pd.DataFrame:
     return data
 
 def query_data(complete=True) -> pd.DataFrame:
-    con = sqlite3.connect('data/nemsis.db')
+    con = sqlite3.connect(path)
     query = f"""
     SELECT
     TRIM({feature_names.PATIENT_TIME}) as patient_time,

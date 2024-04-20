@@ -3,7 +3,7 @@ import pandas as pd
 import sqlite3
 import os
 
-path=['../data/nemsis.db','../data/processeddataCA']
+path=['data/nemsis.db','data/processeddataCA']
 
 missing_indicators = [
     'unknown', 'not recorded', '', '7701003', '7701001', '.', '-',
