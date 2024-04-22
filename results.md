@@ -30,7 +30,7 @@ Accuracy score on hold out set:  0.8644373113054018
         accuracy                           0.86    178198
        macro avg       0.87      0.86      0.86    178198
     weighted avg       0.87      0.86      0.86    178198
-    
+
 - **Accuracy**: Achieved an impressive accuracy of 86.44%, significantly outperforming a baseline logistic regression model.
 - **Precision and Recall**: Demonstrated high precision (0.88) and recall (0.83) for predicting survival, indicating the model’s effectiveness in identifying true positives and negatives.
 - **ROC AUC**: Scored 0.9361, illustrating the model's excellent ability to discriminate between the outcomes.
@@ -40,9 +40,9 @@ Accuracy score on hold out set:  0.8644373113054018
 ### Visualizations
 We provided visual representations of model performance including the ROC curve and the confusion matrix. These visualizations help in understanding the true positive rate against the false positive rate and the distribution of predictions across the actual classes, respectively.
 
-![to-ICU](/figs/xgb1.png.png)
+![to-ICU](figs/xgb1.png)
 
-![to-ICU](/figs/xgb2.png.png)
+![to-ICU](figs/xgb2.png)
 
 ### Challenges and Considerations
 • The challenge of missing data continued to impact the robustness of our model predictions.
