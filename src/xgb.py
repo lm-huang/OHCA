@@ -10,6 +10,7 @@ from sklearn.model_selection import RandomizedSearchCV
 df = data_helper.get_cardiac_arrest_data()
 df = df.sample(frac=0.1, random_state=42)
 df = df[(df['call_to_patient_time'] > 0) & (df['call_to_patient_time'] < 25)]
+df = data_helper.filter_paradox(df)
 df = data_helper.filter_age(df, 100)
 X, y = data_helper.prepare(df)
 

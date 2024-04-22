@@ -42,11 +42,16 @@ def query_data(complete=True) -> pd.DataFrame:
     c.Urbanicity as urbanicity,
     TRIM(ageinyear) as age,
     TRIM({feature_names.MEDICATIONS}) as medication,
+    TRIM({feature_names.CARDIAC_RHYTHM}) as ecg,
+    TRIM({feature_names.HEART_RATE}) as heart_rate,
+    TRIM({feature_names.PATIENT_DISPOSITION}) as patient_disposition,
+    TRIM({feature_names.TYPE_OF_DESTINATION}) as type_of_destination,
     {feature_names.CARDIAC_ARREST_OUTCOME} as outcome
     FROM Pub_PCRevents_CA as p
     left join ComputedElements_CA c on c.PcrKey = p.PcrKey
     left join FACTPCRARRESTWITNESS_CA w on w.PcrKey = p.PcrKey
     left join FACTPCRMEDICATION_CA m on m.PcrKey = p.PcrKey
+    left join FACTPCRVITAL_CA v on v.PcrKey = p.PcrKey
     """
 
     if complete:
@@ -57,7 +62,6 @@ def query_data(complete=True) -> pd.DataFrame:
 def get_cardiac_arrest_data(complete=True)-> pd.DataFrame:
     # query
     df = query_data(complete=complete)
-
     # map
     df = map_cardiac_arrest_data(df, complete=complete)
     print(df.columns)
@@ -81,4 +85,8 @@ def map_outcome(outcome):
 def filter_age(data: pd.DataFrame, end: int, start=0)-> pd.DataFrame:
     data['age'] = data['age'].astype(int)
     return data[(data['age'] > start) & (data['age'] < end)]
+
+def filter_paradox(data: pd.DataFrame):
+    return data[(data['ecg'] == data['heart_rate']) & (data['patient_disposition'] == data['type_of_destination'])]
+
 
