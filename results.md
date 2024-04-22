@@ -3,12 +3,7 @@
 - Stakeholder: Dr. Qingchu Jin
 
 ### Analytic objectives
-Our primary goal is to employ statistical analysis to understand and improve the effectiveness of first responder interventions during cardiac arrest incidents, with a focus on the administration of epinephrine. We aim to:
-
-1. Predict the likelihood of epinephrine administration based on factors like patient demographics, incident location (rural vs urban), and time of response.
-2. Classify the outcomes of rescue efforts (e.g., survival rates, recovery quality) using predictors derived from the EMS data.
-
-Our aim was to enhance the predictability of patient outcomes based on several predictors by employing a more robust machine learning approach using XGBoost.
+The primary objective of this study is to leverage the predictive power of the XGBoost algorithm to evaluate the effectiveness of emergency interventions in Out-of-Hospital Cardiac Arrest (OHCA) cases. Utilizing a comprehensive set of clinical and contextual features, the study aims to identify key predictors of survival outcomes. Additionally, we seek to enhance the accuracy of predictions by excluding data with excessive response times, advanced age, and logical inconsistencies, thereby focusing on generating actionable insights that could potentially improve emergency response strategies and patient survival rates in OHCA scenarios.
 
 ### Analytic objectives
 To tune the XGBoost model, a range of hyperparameters were explored using Randomized Search:
