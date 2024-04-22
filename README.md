@@ -31,3 +31,22 @@
 # EDA
 
 EDA results are shown in [EDA](EDA.md)
+
+
+
+## Instructions
+
+The objective of the EDA is to investigate the disparities in emergency care for cardiac arrest victims between rural and urban settings. Given this, we specifically examined the usage of AED and CPR, as well as the response time of emergency services and the time it takes for patients to reach the hospital emergency department, with a focus on distinguishing and comparing the differences in emergency medical services between urban and rural areas.
+
+Using the XGBoost algorithm, our study evaluates the efficacy of emergency interventions in Out-of-Hospital Cardiac Arrest (OHCA) cases. By analyzing a wide range of clinical and contextual factors, we aim to pinpoint crucial predictors of survival. To increase prediction accuracy, we exclude cases with lengthy response times, advanced age, and logical discrepancies from our data set. This approach is intended to produce practical insights that could enhance emergency responses and increase survival rates in OHCA situations.
+
+The [Results](results.md) contains the outcome.
+
+
+
+## Motivations
+
+Following our initial exploratory data analysis, we observed that while there were differences in survival rates across urban, rural, suburban, and wilderness settings, these differences exist yet are not as prominent as we expected before.
+
+We chose to adopt a more holistic approach to evaluating OHCA survival rates, concentrating on the entire chain of survival. This comprehensive perspective allows us to better understand and improve the critical factors influencing survival outcomes.
+
