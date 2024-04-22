@@ -10,7 +10,6 @@ from sklearn.model_selection import RandomizedSearchCV
 df = data_helper.get_cardiac_arrest_data()
 df = df.sample(frac=0.1, random_state=42)
 df = df[(df['call_to_patient_time'] > 0) & (df['call_to_patient_time'] < 25)]
-df = data_helper.filter_paradox(df)
 df = data_helper.filter_age(df, 100)
 X, y = data_helper.prepare(df)
 
@@ -48,6 +47,7 @@ def randomized_search_cv(X, y):
     plt.xlabel('False Positive Rate (1 - Specificity)')
     plt.ylabel('True Positive Rate (Sensitivity)')
     plt.title('ROC Curve for Survival Prediction')
+    plt.savefig("figs/xgb1.png")
     plt.show()
 
     # Display Confusion Matrix
@@ -55,6 +55,7 @@ def randomized_search_cv(X, y):
     plt.figure(figsize=(8, 6))
     ConfusionMatrixDisplay(cm, display_labels=['Died', 'Survived']).plot()
     plt.title('Confusion Matrix')
+    plt.savefig("figs/xgb2.png")
     plt.show()
 
     return search.best_estimator_, X_test, y_test, y_probs
