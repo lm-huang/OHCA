@@ -28,7 +28,7 @@
 
 
 
-# EDA
+## EDA
 
 EDA results are shown in [EDA](EDA.md)
 
@@ -42,6 +42,8 @@ Using the XGBoost algorithm, our study evaluates the efficacy of emergency inter
 
 The [Results](results.md) contains the outcome.
 
+[Our slides](https://docs.google.com/presentation/d/1IIfAz9e-0DXloayHtpPGabY5niJUHnF2v1AHcmGXrp4/edit#slide=id.p)
+
 
 
 ## Motivations
@@ -49,4 +51,6 @@ The [Results](results.md) contains the outcome.
 Following our initial exploratory data analysis, we observed that while there were differences in survival rates across urban, rural, suburban, and wilderness settings, these differences exist yet are not as prominent as we expected before.
 
 We chose to adopt a more holistic approach to evaluating OHCA survival rates, concentrating on the entire chain of survival. This comprehensive perspective allows us to better understand and improve the critical factors influencing survival outcomes.
+
+
 
